@@ -27,11 +27,11 @@ be currated in accordance to the geo-location data received from the browser or 
 
 -   ### Design
     -   #### Colour Scheme - Coolors Trending color palettes
-        -   The main colors for the site were obtained from Coolors.co. https://coolors.co/palettes/trending I used these hex values #A8DADC,#333, #1D3557, #457B9D,#F1FAEE,#BDD5EA,#E63946,.
+        -   The main colors for the site were obtained from Coolors.co. https://coolors.co/palettes/trending I used these hex values [TBD].
     -   #### Typography
         -   The Fondamento, Fantasy and Acme fonts are the main fonts used throughout the whole website with Serif as the fallback font.
     -   #### Imagery
-        -   Images were sourced from multiple locations to construct the look and feel of the Quartets history.
+        -   Images [TBD]
         -   ####Source and Credit for images used in Members page.
 
             -   
@@ -40,14 +40,7 @@ be currated in accordance to the geo-location data received from the browser or 
 
             -   
 
-            -   
-
-
-
-         ####Source and credit for images used in Discography page
-
-            -   image site url /***************************************************************************************
-                        *    Title:
+            
                     
 
 ### Wireframes - Balsamiq

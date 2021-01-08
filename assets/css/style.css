@@ -78,8 +78,16 @@ body {
 /* rtl:end:ignore */
 
 
-/* Featurettes
-------------------------- */
+/* WEATHER SECTION
+-------------------------------------------------- */
+.temperature-location {
+    height: 30vh;
+    width : 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
 
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */

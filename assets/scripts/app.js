@@ -1,17 +1,24 @@
 window.addEventListener('load', ()=> {
-    let long;
+    let lon;
     let lat;
 
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition
         (position =>{
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
+            lon = position.coords.lon;
+            lat = position.coords.lat;
 
-            const api = `https://data.climacell.co/v4/locations?apikey=YTqgjLWExGlAk7S6os0GN9Cb377tV7F8`
+            const api = `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=8953477c68d7b2d80e71d5bb16a07eea/${lat},${lon}`;
+
+            fetch(api)
+.then(response => {
+  return response.json();
+})
+.then(data => {
+    console.log(data);
+})
         });
-    }else{
-        h1.textContent = "Neep to accept Geo-location for acurate temperature display"
+   
+    
     }
-
 });

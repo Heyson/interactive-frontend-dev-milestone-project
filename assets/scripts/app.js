@@ -1,13 +1,36 @@
 window.addEventListener('load', ()=> {
-
+// Select Elements
     const proxy = "cors-anywhere.herokuapp.com/";
-    const api = `https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=8953477c68d7b2d80e71d5bb16a07eea`;
     const iconElement = document.querySelector(".weather-icon");
     const tempElement = document.querySelector(".temperature-value p");
     const descElement = document.querySelector(".temperature-description p");
     const locationElement = document.querySelector(".location p");
     const notificationElement = document.querySelector(".notificatio");
 
-           
+// App Data
+    const weather = {};
+    
+    weather.temperature = {
+        unit : "celsius"
+    }
+
+// App Consts and Vars
+const KELVIN = 273;
+// API Key
+const key = "8953477c68d7b2d80e71d5bb16a07eea"
+
+// Check if Browser Supports Geolocation
+if('geolocation' in navigator){
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+}else{
+    notificationElement.style.display = "block";
+    notificationElement.innerHTML = "<p>Please allow Geolocation</p>";
+}
+
+// Set Users Position
+function setPosition(position){
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+}
     
 });

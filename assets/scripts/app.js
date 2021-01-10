@@ -45,9 +45,5 @@ function showError(error){
 function getWeather(latitude, longitude){
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
 
-    fetch(api)
-    .then(function(response){
-        let data = response.json();
-        return data;
-    })
+    console.log(api);
 }

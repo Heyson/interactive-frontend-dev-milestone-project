@@ -1,4 +1,4 @@
-window.addEventListener('load', ()=> {
+
 // Select Elements
     const proxy = "cors-anywhere.herokuapp.com/";
     const iconElement = document.querySelector(".weather-icon");
@@ -31,6 +31,19 @@ if('geolocation' in navigator){
 function setPosition(position){
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
+
+    getWeather(latitude, longitude);
 }
+
+// Show Error when Geolocation is not shown
+function showError(error){
+    notificationElement.style.display = "block";
+    notificationElement.innerHTML = `<p> ${error.message}</p>`;
+}
+
+// Get Weather From API Provider
+function getWeather(latitude, longitude){
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+
     
-});
+}

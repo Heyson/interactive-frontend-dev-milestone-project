@@ -19,12 +19,6 @@ const KELVIN = 273;
 // API Key
 const key = "8953477c68d7b2d80e71d5bb16a07eea"
 
-// Show Error when Geolocation is not shown
-function showError(error){
-    notificationElement.style.display = "block";
-    notificationElement.innerHTML = `<p> ${error.message}</p>`;
-}
-
 // Check if Browser Supports Geolocation
 if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
@@ -41,7 +35,11 @@ function setPosition(position){
     getWeather(latitude, longitude);
 }
 
-
+// Show Error when Geolocation is not shown
+function showError(error){
+    notificationElement.style.display = "block";
+    notificationElement.innerHTML = `<p> ${error.message}</p>`;
+}
 
 // Get Weather From API Provider
 function getWeather(latitude, longitude){
@@ -52,21 +50,4 @@ function getWeather(latitude, longitude){
         let data = response.json();
         return data;
     })
-    .then(function(data){
-        weather.temperature.value = Math.floor(data.main.temp - KELVIN);
-        weather.description = data.weather[0].description;
-        weather.iconId = data.weather[0].icon;
-        weather.city = data.name;
-        weather.country = data.sys.country;
-    })
-    .then(function(){
-        displayWeather();        
-    });  
-}
-// Display Weather To UI
-function displayWeather(){
-    iconElement.innerHTML = `<img src="assets/images/icons/${weather.iconId}.png"/>`;
-    templateElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
-    descElement.innerHTML = weather.description;
-    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }

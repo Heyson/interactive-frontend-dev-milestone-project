@@ -1,6 +1,6 @@
 <h1 align="center">Get Up & Go App</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](https://heyson.github.io/interactive-frontend-dev-milestone-project/)
 
 This is an application that pulls info from three different API's: Maps, Weather, and News. The information that is collected from these API's will 
 be currated in accordance to the geo-location data received from the browser or from the user entering a location.
@@ -73,10 +73,6 @@ be currated in accordance to the geo-location data received from the browser or 
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Hover.css:](https://ianlunn.github.io/Hover/)
     - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Fondamento and Acme' fonts into the style.css file which is used on all pages throughout the project.
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
     - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
 1. [Git](https://git-scm.com/)
@@ -174,6 +170,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ## Credits
 
 ### Code
+-   [OpenWeatherMap](https://openweathermap.org/) : Weather forecast API 
+-   [CodeExplaine](https://www.youtube.com/watch?v=KqZGuzrY9D4) : CodeExplaine Tutorial used to set weather API to function based on Geolocation
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 

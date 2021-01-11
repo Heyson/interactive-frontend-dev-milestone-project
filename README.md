@@ -121,7 +121,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
-- 
+- “Mixed content blocked” when running an HTTP AJAX operation in an HTTPS page.
+    - Fix : <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    - Source : https://stackoverflow.com/questions/33507566/mixed-content-blocked-when-running-an-http-ajax-operation-in-an-https-page
 
 ## Deployment
 

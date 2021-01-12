@@ -37,8 +37,13 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
+
+.slide {
+     border-radius: 10px;
+}
 .carousel {
   margin-bottom: 4rem;
+  background-color:rgba(238, 243, 245, 0.5);
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -106,12 +111,16 @@ body {
 }
 
 .weather-container{
-    height: 260px;
-    background-color: #F4F9FF;
+    height: 280px;
+    max-width: 75%;
+    background-color:rgba(238, 243, 245, 0.2);
+    border-radius: 10px;
+    border: solid 4px #ccc;
+    margin: 0 auto 
+
 }
 
 .weather-icon{
-    width: 300px;
     height: 128px;
 }
 
@@ -121,7 +130,6 @@ body {
 }
 
 .temperature-value{
-    width: 300px;
     height:60px;
 }
 

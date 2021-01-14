@@ -27,7 +27,7 @@ function initMap() {
             lng: position.coords.longitude,
           };
           infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
+          infoWindow.setContent("You Are Here!.");
           infoWindow.open(map);
           infoWindow.TrafficLayer(map);
           

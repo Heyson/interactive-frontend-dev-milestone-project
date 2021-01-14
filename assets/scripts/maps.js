@@ -11,6 +11,9 @@ function initMap() {
   const trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
 
+  const transitLayer = new google.maps.TransitLayer();
+  transitLayer.setMap(map);
+
 
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");

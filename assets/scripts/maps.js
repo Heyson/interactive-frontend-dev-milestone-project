@@ -1,4 +1,12 @@
   let map;
+// Check browser for geolocation support
+
+if('geolocation' in navigator){
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+}else{
+    notificationElement.style.display = "block";
+    notificationElement.innerHTML = "<p>Please allow Geolocation</p>";
+}
 
 function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
@@ -6,9 +14,11 @@ function initMap() {
             zoom: 8,
         });
 
+
+ var trafficLayer = new google.maps.TraffcLayer();
+   trafficLayer.setMap(map);
 }
-    var trafficLayer = new google.maps.TraffcLayer();
-    trafficLayer.setMap(map);
+   
 
    
     

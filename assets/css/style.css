@@ -16,6 +16,38 @@ body {
     animation: AnimationName 90s ease infinite;
 }
 
+/*Header Section*/
+header {
+    text-align: center;
+    padding: 50px;
+}
+h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+/*Font Awesome*/
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 4rem;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+}
+ .icon-border {
+     background-color: rgba(238, 243, 245, 0.2);
+     border: 4px solid #fff; 
+     border-radius: 50%; 
+     height: 140px; 
+     width: 140px;
+     margin: 0 auto;
+     text-align: center;
+     padding: 30px 15px;
+ }
+
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -84,6 +116,7 @@ body {
 }
 
 
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -92,8 +125,16 @@ body {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.marketing h2 {
+.marketing h2{
   font-weight: 400;
+  color: #fff;
+  padding: 10px;
+}
+
+.marketing h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 3rem;
 }
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
@@ -135,7 +176,7 @@ body {
     max-width: 75%;
     background-color:rgba(238, 243, 245, 0.2);
     border-radius: 10px;
-    border: solid 4px #ccc;
+    border: solid 4px #fff;
     margin: 0 auto 
 
 }
@@ -184,18 +225,14 @@ body {
     font-size: 1.2em;
 }
 
-.location{
-    
-}
 
 .location p{
     margin: 0;
     padding: 0;
-    color: #293251;
+    color: #fff;
     text-align: center;
     font-size: 0.8em;
 }
-
 
 
 .featurette-divider {

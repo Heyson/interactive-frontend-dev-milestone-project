@@ -1,14 +1,9 @@
    
 // Tutorial From Google Maps https://developers.google.com/maps/documentation/javascript/geolocation
-let map, coffeeMap, infoWindow, service;
+let map, infoWindow, service;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 15,
-  });
-
-  coffeeMap = new google.maps.Map(document.getElementById("coffeeMap"), {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 15,
   });
@@ -61,3 +56,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.setMap(map);
 }
+

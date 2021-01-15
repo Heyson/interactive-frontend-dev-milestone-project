@@ -16,7 +16,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- Layout use from Bootstrap Carousel Template - https://getbootstrap.com/docs/5.0/examples/carousel/ -->
-
+ <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_9DaD7QnxGgYr5x4M2Z3wmbo-QHo74fY&libraries=places&callback=initMap">
+</script>
     <title>Get Up & Go</title>
 </head>
 
@@ -24,7 +27,7 @@
 
     <header>
 <h1>Get Up And Go!</h1>
-<h2>Weather, Coffee, & Traffic</h2>
+<h2>Weather & Traffic</h2>
     </header>
 
     <main>
@@ -38,37 +41,28 @@
 
             <!-- Three columns of text below the carousel -->
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="icon-border"><i class="fa fa-umbrella"></i></div>
                     <h2>Weather</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh
-                        ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                        Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Go to Weather &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="icon-border"><i class="fa fa-coffee" aria-hidden="true"></i></div>
-                    <h2>Coffee</h2>
+                    <p>Dont get caught off guard going out the door. Get your local weather forecast and plan your day accordingly.
+                        Click on the temperature to switch between Celsius and Fahrenheit.
+                    </p>
                     
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                        Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Go to Coffee Map &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                </div><!-- /.col-lg-6 -->
+               
+                <div class="col-lg-6">
                      <div class="icon-border"><i class="fa fa-car"></i></div>
 
                     <h2>Traffic</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id
-                        ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                        condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Go to Traffic &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                    <p>Check your local traffic, avoid jams, search for restaurants along your route and get to your destination on time.</p>
+                    
+                </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
 
               <hr class="featurette-divider">
 
            <div class="row featurette">
+               <div class ="col-md-12  disclaimer">Must accept geolocations request to view services.</div>
                 <div class="col-md-12 app-title">
                     <h3>Weather</h3>
                 </div>
@@ -85,45 +79,17 @@
                    </div>
                    <div class="location"><p>-</p></div>
                </div>
-
-            </div>
-
-            <hr class="featurette-divider">
-               <div class="col-md-12 app-title">
-                    <h3>Coffee</h3>
-                </div>
-           
-
-                <!--Coffee  -->
-            <div class="col-md-5 order-md-1">
-                    <div class="featurette-map" >
-                        <div id="coffeeMap"></div>
-                    </div>
-
-                </div>
-
-
-            <!--Traffic  -->
-
-            <hr class="featurette-divider">
-               <div class="col-md-12 app-title">
-                    <h3>Traffic</h3>
-                </div>
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for
-                            yourself.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                        tellus ac cursus commodo.</p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <div class="featurette-map" >
+                <hr class="featurette-divider">
+ <div class ="col-md-12  disclaimer">Click "Pan to Current Location to center map and update location.</div>
+                <h3>Traffic</h3>
+               
+                <div class="featurette-map" >
                         <div id="map"></div>
                     </div>
 
-                </div>
             </div>
+
+           
 
             <hr class="featurette-divider">
 
@@ -147,11 +113,15 @@
         src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_9DaD7QnxGgYr5x4M2Z3wmbo-QHo74fY&callback=initMap"></script>
-
-        <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_9DaD7QnxGgYr5x4M2Z3wmbo-QHo74fY&libraries=places&callback=initMap">
-</script>
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_9DaD7QnxGgYr5x4M2Z3wmbo-QHo74fY&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+       
     <script src="assets/scripts/maps.js"></script>
+    
+    
 
 </body>
 

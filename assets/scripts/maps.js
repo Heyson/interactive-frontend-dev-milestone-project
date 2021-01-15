@@ -1,6 +1,6 @@
    
 // Tutorial From Google Maps https://developers.google.com/maps/documentation/javascript/geolocation
-let map, infoWindow;
+let map, coffeeMap, infoWindow, service;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {

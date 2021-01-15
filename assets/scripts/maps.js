@@ -16,6 +16,7 @@ function initMap() {
 
 
   infoWindow = new google.maps.InfoWindow();
+  
   const locationButton = document.createElement("button");
   locationButton.textContent = "Pan to Current Location";
   locationButton.classList.add("custom-map-control-button");
@@ -32,7 +33,7 @@ function initMap() {
           infoWindow.setPosition(pos);
           infoWindow.setContent("You Are Here!.");
           infoWindow.open(map);
-          infoWindow.TrafficLayer(map);
+          trafficLayer.TrafficLayer(map);
           
         },
         () => {
